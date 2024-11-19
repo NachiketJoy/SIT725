@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Task 2.2 - Express Web Servers</title>
+  </head>
+  <body>
+    <h1 class="title">Basic calculator</h1>
+
+    <div class="postMethod">
+      <p class="subtitle">Addition using POST Request</p>
+      <form id="formAddition" action="/" method="post" target="_blank">
+        <input type="text" name="num1" placeholder="First Number" />
+        <input type="text" name="num2" placeholder="Second Number" />
+
+        <button type="submit" name="submit">View result</button>
+      </form>
+    </div>
+
+    <div class="getMethod">
+      <p class="subtitle">Addition And subtraction using GET Request</p>
+      <div>
+        <p>Enter the operation in the URL like: <span>http://localhost:3001/add?num1=<i>Number1</i>&num2=<i>Number2</i></span></p>
+        <a href="http://localhost:3001/add?num1=5&num2=3" target="_blank">http://localhost:3001/add?num1=5&num2=3</a>
+        <p>Or for subtraction:</p>
+        <a href="http://localhost:3001/subtract?num1=10&num2=5" target="_blank">http://localhost:3001/subtract?num1=10&num2=5</a>
+      </div>
+    </div>
+    
+  </body>
+</html>
