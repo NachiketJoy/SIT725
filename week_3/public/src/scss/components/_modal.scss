@@ -1,0 +1,23 @@
+.modal {
+  .modal-content {
+    background-color: $grey;
+
+    .row {
+      margin-bottom: 5px;
+    }
+
+    &__desc {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $black;
+    }
+
+    label {
+      color: $black;
+    }
+  }
+
+  .modal-footer {
+    margin-top: 0;
+  }
+}
