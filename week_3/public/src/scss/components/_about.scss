@@ -1,0 +1,23 @@
+.about {
+  margin-bottom: 50px;
+
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-self: start;
+
+    &__img {
+      border-radius: 10px;
+      width: 50%;
+      height: auto;
+    }
+
+    &__info {
+      width: 45%;
+
+      .desc {
+        color: $grey;
+      }
+    }
+  }
+}
