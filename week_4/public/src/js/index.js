@@ -28,7 +28,6 @@ jQuery(function () {
                 throw new Error('Failed to fetch tasks');
             }
             const tasks = await response.json();
-            console.log(tasks)
             displayTasks(tasks);
         } catch (error) {
             console.error('Error fetching tasks:', error);
