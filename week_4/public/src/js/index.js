@@ -93,9 +93,12 @@ jQuery(function () {
                 throw new Error('Failed to add task');
             }
 
+            alert('Task added successfully');
+
             // window.location.reload();
             fetchTasks()
-            // document.getElementById('task-name').value = '';
+            document.getElementById('task-title').value = '';
+            document.getElementById('task-description').value = '';
 
         } catch (error) {
             console.error('Error adding task:', error);
