@@ -5,7 +5,7 @@ require('dotenv').config()
 const connectDB = async () => {
     const mongoURL = process.env.MongoURL;
     try {
-        mongoose.set('strictQuery', false);
+        mongoose.set('strictQuery', true);
         const conn = await mongoose.connect(mongoURL)
         console.log(`Connected to MongoDB ${conn.connection.host}`);
     } catch (err) {
