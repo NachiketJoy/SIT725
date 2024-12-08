@@ -1,0 +1,14 @@
+.navbar {
+  background-color: $medium-black;
+  margin-bottom: 50px;
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    line-height: 0;
+  }
+}
