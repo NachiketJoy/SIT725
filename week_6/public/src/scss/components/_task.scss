@@ -1,0 +1,85 @@
+.task {
+  margin-bottom: 50px;
+
+  .task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.ontrack {
+  position: relative;
+  opacity: 0.1;
+
+  &__name {
+    position: absolute;
+    transform: translateX(-30%) rotate(270deg);
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+
+  &__icon {
+    width: 80%;
+    margin-left: 30%;
+  }
+}
+
+.task_lists {
+  width: 56%;
+  height: 152px;
+  padding: 4px 20px;
+  overflow: auto;
+
+  &__none {
+    text-align: center;
+  }
+
+  .task-list {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba($white, 0.18);
+    border-radius: 6px;
+
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 12px 4px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    .btn_delete {
+      margin-left: auto;
+      padding: 2px 3px;
+      background-color: $danger;
+      border-color: $danger;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.task_form {
+  width: 60%;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba($white, 0.18);
+  text-align: center;
+
+  .btn_submit {
+    padding: 8px 16px;
+  }
+
+  input {
+    color: $white;
+  }
+}

@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // connection to mongoDB
 // import database connection logic, task and profile routes
@@ -30,3 +30,5 @@ app.use(profileRoutes);
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = app; 
