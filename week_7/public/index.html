@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket</title>
+    <!-- Materialize CSS -->
+    <link
+      href="/node_modules/materialize-css/dist/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <ul class="header-details">
+          <li>
+            Name: <span id="name" class="header-details__text"></span>
+          </li>
+          <li>
+            Student ID: <span id="studentID" class="header-details__text studentID"></span>
+          </li>
+          <li>Task: <span class="header-details__text">Task 5.2C</span></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container nav-wrapper">
+        <a href="#" class="logo">
+          <img
+            class="navbar__img"
+            src="src/images/logo.gif"
+            alt="Logo"
+            height="50"
+          />
+        </a>
+        <ul class="hide-on-small-only">
+          <li><a href="#">Home</a></li>
+          <li>
+            <a
+              class="waves-effect waves-light btn transparent modal-trigger"
+              href="#mail-modal"
+            >
+              <i class="material-icons right">mail</i>Sign Up
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="mail-modal" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <form class="col s12 black-text">
+            <p class="modal-content__desc center">
+              A simple form using materialize text inputs: There is no submit
+              button like a real form😋
+            </p>
+            <div class="row">
+              <div class="input-field col s6">
+                <input
+                  placeholder="Nachiket"
+                  id="first_name"
+                  type="text"
+                  class="validate"
+                />
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input
+                  id="last_name"
+                  type="text"
+                  placeholder="Joyekurun"
+                  class="validate"
+                />
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" />
+                <label for="email">Email</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-close waves-effect waves-green btn-flat"
+          >Close</a
+        >
+      </div>
+    </div>
+
+    <!-- about -->
+    <section class="about">
+      <div class="container about-content">
+        <img
+          class="about-content__img materialboxed"
+          src="src/images/profile.jpg"
+          alt="Nachiket"
+        />
+        <div class="about-content__info">
+          <h2 class="heading-2">About Me</h2>
+          <p class="desc">
+            A passionate front-end developer with a strong foundation in
+            programming and web development, utilizing languages and frameworks
+            such as JavaScript, TypeScript, and React.js.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <div class="container">
+        <h2 class="heading-2 center">Skills</h2>
+        <div class="carousel skill-list">
+          <a class="carousel-item" href="#">
+            <img src="src/images/html.png" alt="html"
+          /></a>
+          <a class="carousel-item" href="#">
+            <img src="src/images/css.png" alt="css"
+          /></a>
+          <a class="carousel-item" href="#">
+            <img src="src/images/js.png" alt="js"
+          /></a>
+          <a class="carousel-item" href="#">
+            <img src="src/images/node.png" alt="node"
+          /></a>
+          <a class="carousel-item" href="#">
+            <img src="src/images/git.png" alt="git"
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Task -->
+    <section class="task">
+      <div class="container">
+        <h2 class="heading-2 center">Task</h2>
+        <div class="task-content">
+          <div class="ontrack">
+            <h2 class="ontrack__name">onTrack</h2>
+            <img
+              class="ontrack__icon"
+              src="src/images/ontrack.png"
+              alt="onTrack"
+            />
+          </div>
+
+          <ul id="task-lists" class="task_lists"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add task -->
+    <form id="task-form" class="task_form">
+      <input type="text" id="task-title" placeholder="Title" required />
+      <input
+        type="text"
+        id="task-description"
+        placeholder="Description"
+        required
+      />
+      <button class="btn_submit" type="submit">Add task</button>
+    </form>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <a href="javascript:" class="scroll-up-btn right">
+              <i class="material-icons">keyboard_double_arrow_up</i>
+            </a>
+            <p class="white-text center">
+              &copy; 2024 Nachiket Joyekurun. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>
