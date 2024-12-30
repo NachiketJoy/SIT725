@@ -4,7 +4,8 @@ $colors: (
   medium-black: #202020,
   grey: #bdbdbd,
   light-grey: #e8e8e8,
-  danger: #dc3545
+  danger: #dc3545,
+  success: #7cfc00
 );
 
 $white: map-get($colors, white);
@@ -13,3 +14,4 @@ $medium-black: map-get($colors, medium-black);
 $grey: map-get($colors, grey);
 $light-grey: map-get($colors, light-grey);
 $danger: map-get($colors, danger);
+$success: map-get($colors, success);

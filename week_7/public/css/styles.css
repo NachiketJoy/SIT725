@@ -155,6 +155,46 @@ body {
   margin-right: 2%;
 }
 
+.messageBox {
+  width: 17%;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  background-color: #ffffff;
+}
+.messageBox .message {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 300px;
+  max-height: 300px;
+  overflow-y: scroll;
+  color: #0c0c0c;
+}
+.messageBox .message li {
+  padding: 0.5rem 1rem;
+}
+.messageBox .message li:nth-child(odd) {
+  background: #bdbdbd;
+}
+.messageBox .messageForm {
+  background: #e8e8e8;
+  padding: 15px;
+}
+.messageBox .messageForm .submit {
+  padding: 8px 24px;
+  background: #202020;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  transition: all 0.3s linear;
+}
+.messageBox .messageForm .submit:hover {
+  color: #7cfc00;
+  cursor: pointer;
+}
+
 .header {
   padding: 20px;
 }

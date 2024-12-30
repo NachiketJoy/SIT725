@@ -22,11 +22,10 @@
     <header class="header">
       <div class="container">
         <ul class="header-details">
+          <li>Name: <span id="name" class="header-details__text"></span></li>
           <li>
-            Name: <span id="name" class="header-details__text"></span>
-          </li>
-          <li>
-            Student ID: <span id="studentID" class="header-details__text studentID"></span>
+            Student ID:
+            <span id="studentID" class="header-details__text studentID"></span>
           </li>
           <li>Task: <span class="header-details__text">Task 5.2C</span></li>
         </ul>
@@ -175,6 +174,17 @@
       />
       <button class="btn_submit" type="submit">Add task</button>
     </form>
+
+    <div class="messageBox">
+      <ul id="messages" class="message"></ul>
+      <form id="form" class="messageForm" action="">
+        <input
+          id="input"
+          autocomplete="off"
+          placeholder="Type here..."
+        /><button class="submit">Send</button>
+      </form>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

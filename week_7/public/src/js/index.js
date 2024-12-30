@@ -1,4 +1,5 @@
 jQuery(function () {
+    const socket = io();
 
     scrollUp();
     fetchTasks();
@@ -137,19 +138,31 @@ jQuery(function () {
     }
 
     // socket
-    const socket = io();
-    socket.on('connect', () => {
-        console.log('Connected to socket server');
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    const messages = document.getElementById('messages');
 
-        socket.emit('createMessage', {
-            from: 'Nac',
-            text: 'Welcome to the chat app!'
-        })
+    // Submit message form
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (input.value) {
+            // Send message to server from client
+            socket.emit('chatMessage', input.value);
+            input.value = '';
+        }
     });
 
+    // Display incoming message
     socket.on('newMessage', (message) => {
-        console.log('New message', message);
-    })    
+        const item = document.createElement('li');
+        item.textContent = `${message.from}: ${message.text}`;
+        messages.appendChild(item);
+    })
+
+    // Notify on connection and disconnection
+    socket.on('connect', () => {
+        console.log('Connected to socket server');
+    });
 
     socket.on('disconnect', () => {
         console.log('disconnected from socket server');

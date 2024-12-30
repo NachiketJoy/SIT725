@@ -1,21 +1,17 @@
 # Applied Software Enginnering - SIT725
 
-## Task 6.2D
+## Task 7.2P
 
 ### Description
 
-In this task, we focused on testing the API endpoints of a web application to ensure the correctness and reliability of its functionality. Mocha and Chai were used for writing and running unit tests, verifying that the API correctly handles tasks such as creating, retrieving, and deleting data.
+In this task, we focused on implementing real-time communication. Socket was used for establishing a persistent connection between the client and the server, enabling instant data exchange.
 
-By implementing automated tests for the API, we ensured that the endpoints work as expected under different conditions, including handling missing data. These tests help identify potential issues or bugs early in the development process, improving the overall quality and robustness of the software.
+This approach is particularly useful for applications requiring real-time interactions, such as live chat systems and notifications.
 
 ### Library and Framework used:
 
 ```
 Node.js
 Express
-MongoDB
-Mongoose
-Mocha
-Chai
-Chai-HTTP
+Socket.io
 ```
