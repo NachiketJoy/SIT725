@@ -1,0 +1,45 @@
+.messageBox {
+  width: 17%;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  background-color: $white;
+
+  .message {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    color: $black;
+
+    li {
+      padding: 0.5rem 1rem;
+
+      &:nth-child(odd) {
+        background: $grey;
+      }
+    }
+  }
+
+  .messageForm {
+    background: $light-grey;
+    padding: 15px;
+
+    .submit {
+      padding: 8px 24px;
+      background: $medium-black;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      color: $white;
+      transition:all 0.3s linear;
+
+      &:hover {
+        color: $success;
+        cursor: pointer;
+      }
+    }
+  }
+}
